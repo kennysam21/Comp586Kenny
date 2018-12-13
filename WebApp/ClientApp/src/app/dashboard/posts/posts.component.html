@@ -1,0 +1,8 @@
+<div class="row">
+  <div class="col-md-4">
+    <app-add-post (postCreated)="createOrUpdatePosts($event)" [postInfo]="currentData"></app-add-post>
+  </div>
+  <div class="col-md-8">
+    <app-show-posts [postData]="postData" (editClicked)="editClicked($event)" (newClicked)="newClicked()" (recordDeleted)="deleteClicked($event)"></app-show-posts>
+  </div>
+</div>

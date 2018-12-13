@@ -1,0 +1,16 @@
+<div>
+  <h2 *ngIf="!postInfo || postInfo.id === undefined">Add post</h2>
+    <h2 *ngIf="postInfo && postInfo.id !== undefined">Update post (ID: {{postInfo.id}})</h2>
+  <form>
+      <div class="form-group">
+          <label for="date-input">Post date:</label>
+          <input type="date" id="date-input" [(ngModel)]="postInfo.date" class="form-control" name="date"/>
+      </div>
+      <div class="form-group">
+          <label for="post-input">Post</label>
+          <input type="text" id="post-input" [(ngModel)]="postInfo.post" class="form-control" name="post"/>
+      </div>
+      <button type="button" class="btn btn-primary" (click)="addOrUpdatePostRecord($event);">Save</button>
+
+  </form>
+ </div>

@@ -1,0 +1,18 @@
+<h2>All Posts</h2>
+<table class="table">
+    <thead class="thead-light">
+        <tr>
+            <th>Date</th>
+            <th>Post</th>
+            <th>Options</th>
+    </thead>
+    <tbody>
+        <tr *ngFor="let postInfo of postData">
+            <td>{{ postInfo.date }}</td>
+            <td>{{ postInfo.post }}</td>
+            <td>
+                <a routerLink="/dashboard/posts" (click)="deleteRecord(postInfo)" class="link">Delete</a>
+            </td>
+        </tr>
+    </tbody>
+</table>
